@@ -1,0 +1,760 @@
+<pre>
+@font-face{font-family:'Oswald';font-style:normal;font-weight:400;src:local('Oswald Regular'),local('Oswald-Regular'),url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff')}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+
+h1,h2,h3,h4,h5,h6{font-family:'Oswald',sans-serif;font-weight:400;line-height:1.1;margin:0 0 0.5em}
+h1{font-size:160%}
+h2{font-size:140%}
+h3{font-size:120%}
+h4{font-size:100%}
+h5{font-size:80%}
+h6{font-size:60%}
+
+h3 {
+font-family: sans-serif;
+font-weight: normal;
+margin: 5px 0;
+padding: 10px 50px;
+background: #5498c9;
+font-size: 15px;
+color:#fff;
+}
+h3 a:link {
+  text-decoration:none;
+  color: #fff;
+}
+h3 a:visited {
+  text-decoration:none;
+  color: #fff;
+}
+h3 a:hover {
+text-decoration: none;
+color: #00FFF5;
+text-shadow: 0px 1px #1BACAC;
+transition: all 1s ease;
+}
+#comments > h4 {
+display: block;
+margin: 0 auto;
+padding: 20px 15px;
+background: #F5F5F5;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+font-weight: normal;
+border-right: 1px solid #ddd;
+}
+
+a:link {
+  text-decoration:none;
+  color: #21AFA4;
+}
+
+a:visited {
+  text-decoration:none;
+  color: #21AFA4;
+}
+
+a:hover {
+  text-decoration:none;
+  color: #C94E5C;
+}
+
+#menu-atas {
+  margin:0 auto;
+  width:100%;
+  height:48px;
+  position:fixed;
+  background:rgba(0, 0, 0, 0.52);
+  padding:0;
+}
+#menu-atas > .tengah {
+margin:0 auto;
+width:280px;
+padding:0;
+}
+#menu-atas > .tengah > li {
+float:left;
+list-style:none;
+padding:5px;
+}
+#menu-atas > .tengah > li:hover {
+background:#2C2C2C;
+}
+#menu-atas > .tengah > li a {
+opacity:0.9;
+text-decoration:none;
+}
+#menu-atas > .tengah > li i:hover {
+color:#000;
+}
+#menu-atas > .tengah > .menu-bawah ul {
+display:none;
+}
+#menu-atas > .tengah > .menu-bawah :hover ul {
+display:block;
+}
+
+#menu-atas > .kanan {
+margin:0 auto;
+width:100px;
+padding:0;
+float:right;
+}
+#menu-atas > .kiri {
+margin: 0 auto;
+width: 185px;
+padding: 15px 10px;
+float: left;
+}
+#menu-atas > .kiri a {
+list-style: none;
+padding: 11px;
+font-family: sans-serif;
+font-size: 11px;
+color: #C2C2C2;
+text-decoration: none;
+}
+#menu-atas > .kiri a:hover {
+color:#fff;
+}
+#menu-atas > .kanan > li {
+float:left;
+list-style:none;
+padding:11px;
+}
+
+body {
+  background:#2C2C2C;
+  margin:0;
+  padding:0;
+  font: normal normal 14px/17px "Roboto_Regular","Roboto","Roboto Regular","Franklin Gothic Medium","Franklin Gothic Book","Lucida Sans","Lucida Sans Unicode",Helmet,Freesans,sans-serif;
+  color:#000;
+  box-shadow: inset 0 7px 15px #1A1616;
+}
+#main-wrapper {
+  margin: 0 auto;
+  width: 1074px;
+  padding-top:60px;
+  padding-bottom:30px;
+}
+#divWrap {
+position: fixed;
+float: right;
+margin: 0 auto;
+right: 5px;
+bottom: 5px;
+}
+#dalam {
+  max-width: 1200px;
+  min-width: 800px;
+  margin:0 auto;
+  padding:0;
+  background: #fff;
+  padding: 10px;
+  transition: all .4s ease-in;
+}
+
+/* Clearing element */
+.clear { position: relative; clear: both; height: 0; line-height: 0; margin: 0; padding: 0; border: 0; font-size: 1px; }
+/*! Hint.css - v1.3.3 - 2014-07-06
+* http://kushagragour.in/lab/hint/
+* Copyright (c) 2014 Kushagra Gour; Licensed MIT */
+
+/* HINT.css - A CSS tooltip library */
+
+/**
+* HINT.css is a tooltip library made in pure CSS.
+*
+* Source: https://github.com/chinchang/hint.css
+* Demo: http://kushagragour.in/lab/hint/
+*
+* Release under The MIT License
+*
+*/
+/**
+* source: hint-core.scss
+*
+* Defines the basic styling for the tooltip.
+* Each tooltip is made of 2 parts:
+* 	1) body (:after)
+* 	2) arrow (:before)
+*
+* Classes added:
+* 	1) hint
+*/
+.hint, [data-hint] {
+position: relative;
+display: inline-block;
+/**
+* tooltip arrow
+*/
+/**
+* tooltip body
+*/ }
+.hint:before, .hint:after, [data-hint]:before, [data-hint]:after {
+position: absolute;
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+visibility: hidden;
+opacity: 0;
+z-index: 1000000;
+pointer-events: none;
+-webkit-transition: 0.3s ease;
+-moz-transition: 0.3s ease;
+transition: 0.3s ease;
+-webkit-transition-delay: 0ms;
+-moz-transition-delay: 0ms;
+transition-delay: 0ms; }
+.hint:hover:before, .hint:hover:after, .hint:focus:before, .hint:focus:after, [data-hint]:hover:before, [data-hint]:hover:after, [data-hint]:focus:before, [data-hint]:focus:after {
+visibility: visible;
+opacity: 1; }
+.hint:hover:before, .hint:hover:after, [data-hint]:hover:before, [data-hint]:hover:after {
+-webkit-transition-delay: 100ms;
+-moz-transition-delay: 100ms;
+transition-delay: 100ms; }
+.hint:before, [data-hint]:before {
+content: '';
+position: absolute;
+background: transparent;
+border: 6px solid transparent;
+z-index: 1000001; }
+.hint:after, [data-hint]:after {
+content: attr(data-hint);
+background: #000;
+color: white;
+padding: 8px 10px;
+font-size: 12px;
+line-height: 12px;
+white-space: nowrap; }
+/**
+* source: hint-position.scss
+*
+* Defines the positoning logic for the tooltips.
+*
+* Classes added:
+* 	1) hint--top
+* 	2) hint--bottom
+* 	3) hint--left
+* 	4) hint--right
+*/
+/**
+* set default color for tooltip arrows
+*/
+.hint--top:before {
+border-top-color: #000;
+margin-left: -6px;
+}
+.hint--bottom:before {
+border-bottom-color: #000; }
+.hint--left:before {
+border-left-color: #000; }
+.hint--right:before {
+border-right-color: #000; }
+/**
+* top tooltip
+*/
+.hint--top:before {
+margin-bottom: -12px; }
+.hint--top:after {
+margin-left: -49px; }
+.hint--top:before, .hint--top:after {
+bottom: 100%;
+left: 50%; }
+.hint--top:hover:after, .hint--top:hover:before, .hint--top:focus:after, .hint--top:focus:before {
+-webkit-transform: translateY(-8px);
+-moz-transform: translateY(-8px);
+transform: translateY(-8px); }
+/**
+* bottom tooltip
+*/
+.hint--bottom:before {
+margin-top: -12px;
+margin-right: 20px; }
+.hint--bottom:after {
+margin-left: -18px; }
+.hint--bottom:before, .hint--bottom:after {
+top: 180%;}
+.hint--bottom:hover:after, .hint--bottom:hover:before, .hint--bottom:focus:after, .hint--bottom:focus:before {
+-webkit-transform: translateY(8px);
+-moz-transform: translateY(8px);
+transform: translateY(8px); }
+/**
+* right tooltip
+*/
+.hint--right:before {
+margin-left: -12px;
+margin-bottom: -6px; }
+.hint--right:after {
+margin-bottom: -14px; }
+.hint--right:before, .hint--right:after {
+left: 100%;
+bottom: 50%; }
+.hint--right:hover:after, .hint--right:hover:before, .hint--right:focus:after, .hint--right:focus:before {
+-webkit-transform: translateX(8px);
+-moz-transform: translateX(8px);
+transform: translateX(8px); }
+/**
+* left tooltip
+*/
+.hint--left:before {
+margin-right: -12px;
+margin-bottom: -6px; }
+.hint--left:after {
+margin-bottom: -14px; }
+.hint--left:before, .hint--left:after {
+right: 100%;
+bottom: 50%; }
+.hint--left:hover:after, .hint--left:hover:before, .hint--left:focus:after, .hint--left:focus:before {
+-webkit-transform: translateX(-8px);
+-moz-transform: translateX(-8px);
+transform: translateX(-8px); }
+/**
+* source: hint-color-types.scss
+*
+* Contains tooltips of various types based on color differences.
+*
+* Classes added:
+* 	1) hint--error
+* 	2) hint--warning
+* 	3) hint--info
+* 	4) hint--success
+*
+*/
+/**
+* Error
+*/
+.hint--error:after {
+background-color: #b34e4d;
+text-shadow: 0 -1px 0px #592726; }
+.hint--error.hint--top:before {
+border-top-color: #b34e4d; }
+.hint--error.hint--bottom:before {
+border-bottom-color: #b34e4d; }
+.hint--error.hint--left:before {
+border-left-color: #b34e4d; }
+.hint--error.hint--right:before {
+border-right-color: #b34e4d; }
+/**
+* Warning
+*/
+.hint--warning:after {
+background-color: #c09854;
+text-shadow: 0 -1px 0px #6c5328; }
+.hint--warning.hint--top:before {
+border-top-color: #c09854; }
+.hint--warning.hint--bottom:before {
+border-bottom-color: #c09854; }
+.hint--warning.hint--left:before {
+border-left-color: #c09854; }
+.hint--warning.hint--right:before {
+border-right-color: #c09854; }
+/**
+* Info
+*/
+.hint--info:after {
+background-color: #3986ac;
+text-shadow: 0 -1px 0px #193b4d; }
+.hint--info.hint--top:before {
+border-top-color: #3986ac; }
+.hint--info.hint--bottom:before {
+border-bottom-color: #3986ac; }
+.hint--info.hint--left:before {
+border-left-color: #3986ac; }
+.hint--info.hint--right:before {
+border-right-color: #3986ac; }
+/**
+* Success
+*/
+.hint--success:after {
+background-color: #458746;
+text-shadow: 0 -1px 0px #1a321a; }
+.hint--success.hint--top:before {
+border-top-color: #458746; }
+.hint--success.hint--bottom:before {
+border-bottom-color: #458746; }
+.hint--success.hint--left:before {
+border-left-color: #458746; }
+.hint--success.hint--right:before {
+border-right-color: #458746; }
+/**
+* source: hint-always.scss
+*
+* Defines a persisted tooltip which shows always.
+*
+* Classes added:
+* 	1) hint--always
+*
+*/
+.hint--always:after, .hint--always:before {
+opacity: 1;
+visibility: visible; }
+.hint--always.hint--top:after, .hint--always.hint--top:before {
+-webkit-transform: translateY(-8px);
+-moz-transform: translateY(-8px);
+transform: translateY(-8px); }
+.hint--always.hint--bottom:after, .hint--always.hint--bottom:before {
+-webkit-transform: translateY(8px);
+-moz-transform: translateY(8px);
+transform: translateY(8px); }
+.hint--always.hint--left:after, .hint--always.hint--left:before {
+-webkit-transform: translateX(-8px);
+-moz-transform: translateX(-8px);
+transform: translateX(-8px); }
+.hint--always.hint--right:after, .hint--always.hint--right:before {
+-webkit-transform: translateX(8px);
+-moz-transform: translateX(8px);
+transform: translateX(8px); }
+/**
+* source: hint-rounded.scss
+*
+* Defines rounded corner tooltips.
+*
+* Classes added:
+* 	1) hint--rounded
+*
+*/
+.hint--rounded:after {
+border-radius: 4px; }
+/**
+* source: hint-effects.scss
+*
+* Defines various transition effects for the tooltips.
+*
+* Classes added:
+* 	1) hint--no-animate
+* 	2) hint--bounce
+*
+*/
+.hint--no-animate:before, .hint--no-animate:after {
+-webkit-transition-duration: 0ms;
+-moz-transition-duration: 0ms;
+transition-duration: 0ms; }
+.hint--bounce:before, .hint--bounce:after {
+-webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+-moz-transition: opacity 0.3s ease, visibility 0.3s ease, -moz-transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24); }
+
+
+
+.dropdown 
+{
+position: relative;
+text-align:left;
+}
+.submenu
+{
+position: absolute;
+top: -12px;
+left: -10px;
+z-index: 100;
+display: none;
+margin-top: 42px;
+}
+.dropdown li a 
+{
+color: #555555;
+display: block;
+font-family: sans-serif;
+font-size: 13px;
+padding: 6px 23px;
+cursor: pointer;
+text-decoration: none;
+}
+.dropdown li:hover {
+background:#F5F5F5;
+}
+.dropdown li a:hover
+{
+text-decoration: none;
+color:#000;
+}
+a.account 
+{
+font-size: 11px;
+line-height: 16px;
+color: #555;
+position: absolute;
+z-index: 110;
+display: block;
+height: 32px;
+width: 30px;
+margin: 0;
+text-decoration: none;
+cursor: pointer;
+}
+.root
+{
+background: #fff;
+list-style: none;
+margin: 5px;
+font-size: 11px;
+padding: 0;
+width: 165px;
+box-shadow: 0px 0px 3px 0px #575757;
+}
+
+::-webkit-scrollbar {
+background:none;
+width:10px;
+}
+::-webkit-scrollbar-thumb {
+-webkit-box-shadow: #444;
+background-image: -webkit-linear-gradient(top, #555 10%, #555 51%);
+border:1px solid #666;
+}
+::-webkit-scrollbar-thumb:hover {
+-webkit-box-shadow: #444;
+background-image: -webkit-linear-gradient(top, #aaa 10%, #aaa 51%);
+border:1px solid #bbb;
+}
+
+#custom {
+left:0;
+bottom:0;
+padding:40px 10px;
+position:fixed;
+}
+#custom a {
+text-decoration: none;
+color: #C2C2C2;
+text-shadow: 0px 1px #000;
+font-family: sans-serif;
+font-size: 12px;
+border-radius: 3px;
+}
+#custom a:hover{
+color:#fff;
+}
+#custom > .gabung {
+background: rgba(36, 36, 36, 1);
+padding: 5px 15px 5px 5px;
+border-radius: 3px;
+}
+
+.show {
+position: fixed;
+display: none;
+margin: -165px 0px;
+width: 110px;
+}
+.show > li {
+list-style: none;
+padding: 3px 2px 5px 7px;
+border-bottom: 1px solid #555555;
+background: rgba(36, 36, 36, 1);
+}
+.breadcrumbs{padding: 5px 10px;
+margin-top: 0px;
+font-size: 11px;
+color: #5B5B5B;
+border: 1px dotted #bbb;}
+
+.informasi {
+margin: 0 auto;
+padding: 5px;
+margin-bottom:5px;
+border-bottom: 1px dotted #C9C9C9;
+border-top: 1px dotted #C9C9C9;
+}
+#blog-pager {
+margin: .5em 0;
+padding-top: 15px;
+text-align: center;
+overflow: hidden;
+}
+
+#comment-holder {
+margin: 0 auto;
+}
+
+/*------------- START http://junior-hc.blogspot.com/ Threaded Comments -------------*/
+.comments {
+clear: both;
+margin-top: 10px;
+margin-bottom: 0px;
+line-height: 1em;
+}
+.comments .comments-content {
+font-size: 12px;
+margin-bottom: 16px;
+font-weight: normal;
+text-align:left;
+line-height: 1.4em;
+}
+.comments .comment .comment-actions a {
+display: inline-block;
+margin: 0;
+border: 1px solid #E6E6E6;
+color: #424242 !important;
+text-align: center;
+text-shadow: 0 -1px 0 white;
+text-decoration: none;
+border-radius: 2px;
+font: 11px/18px sans-serif;
+padding: 2px 8px;
+margin-right: 10px;
+}
+.comments .comment .comment-actions a:hover {
+text-decoration: none;
+}
+.comments .comments-content .comment-thread ol {
+list-style-type: none;
+padding: 0;
+text-align: none;
+}
+.comments .comments-content .inline-thread {
+padding: 0.5em 1em;
+}
+.comments .comments-content .comment-thread {
+border: 1px solid #E9E9E9;
+padding: 5px;
+margin: 0;
+}
+.comments .comments-content .comment-thread:empty {
+display: none;
+}
+.comments .comments-content .comment-replies {
+margin-top: 1em;
+margin-left: 40px; font-size:12px;
+}
+.comments .comments-content .comment {
+margin-bottom:16px;
+padding-bottom:8px;
+}
+.comments .comments-content .comment:first-child {
+padding-top:0;
+}
+.comments .comments-content .comment:last-child {
+border-bottom:0;
+padding-bottom:0;
+}
+.comments .comments-content .comment-body {
+position:relative;
+}
+.comments .comments-content .user {
+font-style:normal;
+font-weight:bold;
+}
+.comments .comments-content .user a {
+color:#2D5E7B; font-size:14px; font-weight: bold;text-decoration: none;
+}
+.comments .comments-content .icon.blog-author {
+display: inline-block;
+height: 18px;
+margin: 0;
+width:0;
+}
+.comments .comments-content .datetime {
+color: #999999;
+font-size: 11px;
+text-decoration: none;
+}
+.comments .comments-content,
+.comments .comments-content .comment-content {
+margin:0 0 8px;
+}
+.comment-header {
+margin-bottom: 5px;
+text-transform: lowercase;
+}
+.comments .comments-content .comment-content {
+text-align:none;
+}
+.comments .comments-content .owner-actions {
+position:absolute;
+right:0;
+top:0;
+}
+.comments .comments-replybox {
+border: none;
+height: 250px;
+width: 100%;
+}
+.comments .comment-replybox-single {
+margin-top: 5px;
+margin-left: 48px;
+}
+.comments .comment-replybox-thread {
+margin-top: 5px;
+}
+.comments .comments-content .loadmore a {
+display: block;
+padding: 10px 16px;
+text-align: center;
+}
+.comments .thread-toggle {
+cursor: pointer;
+display: inline-block;
+}
+.comments .continue {
+cursor: pointer;
+}
+.comments .continue a {
+display: inline-block;
+margin: 0;
+border: 1px solid #E6E6E6;
+color: #424242 !important;
+text-align: center;
+text-shadow: 0 -1px 0 white;
+text-decoration: none;
+border-radius: 2px;
+font: 11px/18px sans-serif;
+padding: 2px 8px;
+margin-right: 10px;
+}
+.comments .comments-content .loadmore {
+cursor: pointer;
+max-height: 3em;
+margin-top: 3em;
+}
+.comments .comments-content .loadmore.loaded {
+max-height: 0px;
+opacity: 0;
+overflow: hidden;
+}
+.comments .thread-chrome.thread-collapsed {
+display: none;
+}
+.comments .thread-toggle {
+display: inline-block;
+}
+.comments .thread-toggle .thread-arrow {
+display: inline-block;
+height: 6px;
+width: 7px;
+overflow: visible;
+margin: 0.3em;
+padding-right: 4px;
+}
+.comments .thread-expanded .thread-arrow {
+background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAc AAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC") no-repeat scroll 0 0 transparent;
+}
+.comments .thread-collapsed .thread-arrow {
+background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA AcAAAAHCAYAAADEUlfTAAAAJUlEQVR42mNgAILy8vL/DLgASBKnApgkVgXIkhgKiNKJ005s4gDLbCZBiSxfygAAAAB JRU5ErkJggg==") no-repeat scroll 0 0 transparent;
+}
+.comments .avatar-image-container {
+background-image: url("http://img846.imageshack.us/img846/7357/unled1oww.jpg");
+background-position: center center;
+background-repeat: no-repeat;
+float: left;
+width: 36px;
+max-height: 36px;
+margin: 0;
+vertical-align: middle;
+overflow: hidden;
+border-radius: 20px;}
+.comments .avatar-image-container img {
+width: 36px;
+}
+.comments .comment-block {
+margin-left: 48px;
+position:static;
+}
+/* Responsive styles. */
+@media screen and (max-device-width: 480px) {
+.comments .comments-content .comment-replies {
+margin-left: 0;
+}
+}
+</pre>
