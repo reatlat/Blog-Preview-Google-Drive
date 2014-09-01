@@ -35,6 +35,13 @@
     </b:if>
 
 <b:skin><![CDATA[
+/*
+Blogger Template Style
+Name    : Blog Preview Google Drive
+Designer: Agus Makmun
+Concept : Google Drive
+URL     : http://semua-tinggal-download.blogspot.com/
+*/
 
 @font-face{font-family:'Oswald';font-style:normal;font-weight:400;src:local('Oswald Regular'),local('Oswald-Regular'),url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff')}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
@@ -867,9 +874,9 @@ $(&quot;.account&quot;).attr(&#39;id&#39;, &#39;&#39;);
 <style>
 .post-body{text-align: justify;
 color: #444;
-font-family: Roboto, Arial, sans-serif;
 font-size: 13px;
-font-weight: 300;}
+font-weight: 300;
+}
 .post-body img{max-width:none;width:auto;}
 .read-more{float:right; padding-top: 10px;}
 .read-more a{color: #ACAEB9;
@@ -947,12 +954,11 @@ border-bottom: 2px solid #414040;'/>  Sitemap
 <li><a href='#Dashboard' title=''>Dashboard</a></li>
 <li><a href='#Profile' title=''>Profile</a></li>
 <li><a href='#settings' title=''>Settings</a></li>
-  <li><i class="icon-exclamation-sign icon-large" style="
-    color: #000;  opacity: 0.9;
-    display: block;
-    position: absolute;
-    margin: 6px;
-"></i><a href='#feedback' title=''>Send Feedback</a></li>
+  <li><i class="icon-exclamation-sign icon-large" style="position: absolute;
+margin: 0 auto;
+padding: 6px 6px;
+color: #000;
+font-size: 12px;"></i><a href='#feedback' title=''>Send Feedback</a></li>
 </ul>
 </div>
 </div>
@@ -1159,7 +1165,7 @@ Biar gx bad hehe
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
-      <h4 id='comment-post-message'><data:postCommentMsg/></h4>
+      <h4 id='comment-post-message' style='padding: 5px 15px;'><data:postCommentMsg/></h4>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
       <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
@@ -1210,10 +1216,10 @@ Biar gx bad hehe
   <div class='comments' id='comments'>
     <a name='comments'/>
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
-<li class='icon-globe icon-2x' style='     float: right;     padding: 12px 17px;     color: #2A2A2A;     background: #FFFFFF;     border: 1px solid #ddd; '/>
+<li class='icon-globe icon-2x' style='     float: right;     padding: 13px 17px;     color: #2A2A2A;     background: #FFFFFF;     border: 1px solid #ddd; '/>
     </b:if>
     <b:if cond='data:post.allowComments'>
-      <h4><data:post.commentLabelFull/></h4>
+      <h4 style='border-bottom: 1px solid #ddd;'><data:post.commentLabelFull/></h4>
 
       <b:if cond='data:post.commentPagingRequired'>
         <span class='paging-control-container'>
@@ -1595,7 +1601,12 @@ Biar gx bad hehe
 
     <a expr:name='data:post.id'/>
     <b:if cond='data:post.title'>
-<li class=' icon-check-sign icon-large' style='position: absolute; margin: 0 auto; padding: 10px 12px; background: #316b95; color: #fff; font-size: 13px;'/>
+<li class=' icon-check-sign icon-large' style='position: absolute;
+margin: 0 auto;
+padding: 10px 12px;
+background: #316b95;
+color: #fff;
+font-size: 12px;'/>
       <h3 class='post-title entry-title' itemprop='name'>
       <b:if cond='data:post.link'>
         <a expr:href='data:post.link'><data:post.title/></a>
@@ -1914,7 +1925,7 @@ Biar gx bad hehe
   <div class='comments' id='comments'>
     <a name='comments'/>
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
-<li class='icon-globe icon-2x' style='     float: right;     padding: 12px 17px;     color: #2A2A2A;     background: #FFFFFF;     border: 1px solid #ddd; '/>
+<li class='icon-globe icon-2x' style='     float: right;     padding: 13px 17px;     color: #2A2A2A;     background: #FFFFFF;     border: 1px solid #ddd; '/>
     </b:if>
     <h4><data:post.commentLabelFull/></h4>
     <div class='comments-content'>
