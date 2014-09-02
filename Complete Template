@@ -802,18 +802,253 @@ margin-left: 0;
 }
 }
 
-#search {background: #fff;border-radius: 2px;}
+#search {background: #fff;border-radius: 2px;height: 40px;}
 #search-form {color: gray;
-width: 91.8%;
+width: 86.5%;
 padding: 6px 70px 6px 10px;
 font: 13px Arial;
 transition: all 0.2s linear 0s;
-margin: -10px 0 10px;
+margin: 4px 0;
 border: 1px solid #CFCFCF;
-border-radius: 2px;
+border-right: none;
+border-radius: 2px 0 0 2px;
 }
-.search-button,.search-button:hover{background-color:#4D90FE;width:60px;padding:2px 5px;margin:5px 0 0 -63px;top:4px;border-radius:0 2px 2px 0;font-size:13px;cursor:pointer;border:none;position:relative;}
+.search-button,.search-button:hover{background-color: #4D90FE;
+width: 65px;
+padding: 3px 5px;
+margin: 4px 0 0 -63px;
+top: 4px;
+border-radius: 0 2px 2px 0;
+font-size: 13px;
+cursor: pointer;
+border: none;
+float: right;}
 
+
+
+/* Notifikasi Komentar ala zbanget.blogspot.com
+----------------------------------------------- */
+#show-total {
+	position: fixed;
+	top: 0px;
+	right: 148px;
+	z-index: 999;
+	cursor: pointer;
+	float: right;
+	font: bold 12px Arial;
+	color: #9a9fff }
+ 
+.total-counter {
+	background-color: #bfc2ff;
+	color: white;
+	padding: 2px 6px;
+	font-size: 11px;
+	border-radius: 4px;
+	font-weight: bold }
+ 
+#notif { cursor: pointer }
+ 
+	#notif:before {
+		content:url('http: //2.bp.blogspot.com/-wNOnRbS7rfM/UoZYxuLVMkI/AAAAAAAAGFI/CEqcJwQXOfc/s1600/lonceng2.png');
+		border: 1px solid #b6b5b5;
+		padding: 5px 6px 6px 6px;
+		border-radius: 3px;
+		display: block;
+		position: fixed;
+		top: 0px;
+		right: 150px;
+		opacity: .5;
+		z-index: 999;
+		transition: all .4s ease-out }
+ 
+	#notif:hover:before { opacity: 1 }
+ 
+#notif2 {
+	cursor: pointer;
+	display: none;
+	position: fixed }
+ 
+	#notif2:before {
+		content:url('http: //2.bp.blogspot.com/-wNOnRbS7rfM/UoZYxuLVMkI/AAAAAAAAGFI/CEqcJwQXOfc/s1600/lonceng2.png');
+		border: 1px solid #b6b5b5;
+		padding: 5px 6px 6px 6px;
+		border-radius: 3px;
+		display: block;
+		position: fixed;
+		top: 0px;
+		right: 150px;
+		opacity: .5;
+		z-index: 9997;
+		transition: all .4s ease-out }
+ 
+	#notif2:hover:before { opacity: 1 }
+ 
+#cm-wrapper {
+	width: 300px;
+	position: fixed;
+	top: 50px;
+	right: -381px;
+	z-index: 999;
+	background-color: #192028;
+	padding: 15px 13px 25px 15px;
+	color: #666;
+	font-family: Arial,Sans-serif;
+	border-top: 8px solid #9a9fff;
+	transition: .5s ease }
+ 
+	#cm-wrapper:before {
+		content: "";
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: -24px;
+		right: 157px;
+		border: 8px solid transparent;
+		border-color: transparent transparent #9a9fff }
+ 
+#scroll {
+	width: 293px;
+	height: 567px;
+	overflow: hidden;
+	z-index: 999999 }
+ 
+.cm-outer {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 11px;
+	text-align: left;
+	height: 567px;
+	overflow: auto }
+ 
+pre,.cm-outer pre,i[rel="pre"] {
+	padding: .8em 1em;
+	margin: .5em 0;
+	height: 50px;
+	background-color: #2f3741;
+	border-left: 4px solid #0094fc;
+	font-size: 13px;
+	color: #fff;
+	font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,Monospace;
+	line-height: 1.4em;
+	white-space: pre;
+	word-wrap: normal;
+	white-space: pre;
+	overflow: auto;
+	border: 1px solid #222 }
+ 
+.post pre {
+	height: 200px;
+	border-left: 5px solid #0094fc; }
+ 
+.post code {
+	color: #a9f0ff;
+	background: #1c1e2e;
+	font-family: Consolas,Monaco,'Andale Mono','Courier New',Courier,Monospace;
+	line-height: 14px;
+	font-size: 14px;
+	padding: 3px 5px;
+	margin: 5px;
+	border: 1px solid #000;
+	border-radius: 2px;
+	border-left: 5px solid #0320f7 }
+ 
+.cm-outer code {
+	color: #fdffd3;
+	font-size: 10px;
+	font-style: italic }
+ 
+.cm-text .cm-image {
+	width: 160px;
+	margin: 0 10px 40px 0;
+	position: relative;
+	border-radius: 0;
+	border: 4px solid #000 }
+ 
+#comment_block .cm-image {
+	cursor: pointer;
+	display: block;
+	max-width: 400px;
+	margin: 10px auto;
+	box-shadow: 0 0 1px #000 }
+ 
+.cm-outer li {
+	padding: 7px 10px 12px;
+	list-style: none;
+	clear: both;
+	position: relative;
+	border-top: 1px solid #28313b;
+	border-bottom: 1px solid #111;
+	margin-right: 10px }
+ 
+	.cm-outer li.selected { border-left: 4px solid #fffe8c }
+ 
+	.cm-outer li:first-child { border-top: 0 }
+ 
+	.cm-outer li:last-child { border-bottom: 0 }
+ 
+.cm-text { color: #fff }
+ 
+.cm-outer { margin:0 0 5px;line-height: 14px }
+ 
+.cm-header {
+	margin: 4px 0 20px 80px;
+	font-size: 12px;
+	font-weight: normal;
+	!important }
+ 
+	.cm-header a {
+		color: #c1c1ff;
+		text-decoration: none;
+		font-size: 12px;
+		font-weight: bold }
+ 
+		.cm-header a:hover { color:#e6e6e6;text-decoration: none }
+ 
+.cm-outer .cm-content { overflow: hidden }
+ 
+.cm-content { margin-left: 80px }
+ 
+.cm-outer img {
+	display: block;
+	float: left;
+	background:#8fa2cb url('http: //img1.blogblog.com/img/anon36.png') no-repeat 50% 50%;
+	overflow: hidden;
+	border-radius: 0 15px 0 15px;
+	position: absolute;
+	top: 12px;
+	left: 0;
+	border: 3px solid #3d464f }
+ 
+.cm-footer { margin-top:30px;font-size: 10px }
+ 
+	.cm-footer a { color:#ccc;text-decoration: none }
+ 
+		.cm-footer a:hover { color:#c1c1ff;text-decoration: none }
+ 
+div.cm-header img[src='http://img1.blogblog.com/img/openid16-rounded.gif'] { content:url(http: //2.bp.blogspot.com/-8NurYzHIoWQ/Ujc_oLurXII/AAAAAAAAFek/XhAm-oLwg7Q/s80-c/gravatar.png) }
+ 
+.bg_hitam {
+	display: none;
+	position: absolute;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: 99;
+	opacity: .7 }
+ 
+img.cm-smiley {
+	float: none;
+	position: relative;
+	display: inline-block;
+	width: 12px !important;
+	height: 12px !important;
+	top: 2px;
+	border: 0;
+	border-radius: 2px;
+	background: 0 }
 
 
 ]]></b:skin>
@@ -862,6 +1097,29 @@ $(&quot;.account&quot;).attr(&#39;id&#39;, &#39;&#39;);
 </script>
 
 <style type='text/css'>
+#kutipan {
+    position:fixed;
+    z-index:1000;
+    top:0px;left:0px;
+    width:100%;height:100%;
+}
+.background-hitam {
+    background:#000;
+    opacity:.5;
+    position:fixed;
+    z-index:-1;
+    top:0px;left:0px;
+    width:100%;height:100%;
+}
+.kutipan-wrapper {
+    position:relative;
+     margin:0 auto;
+     margin-top:20%; /* Setting Jarak dari Atas ke Kutipan disini */
+    background:#fff;
+    width:50%; /* Setting Lebar Kutipan Disini! */
+    padding:20px;
+}
+
 .status-msg-body {
   text-align: center;
   padding: .3em 0;
@@ -983,13 +1241,32 @@ function removeHtmlTag(strx,chop){if(strx.indexOf("<")!=-1){var s = strx.split("
 
   </ul>
   <ul class='kanan'>
-    <li style='padding: 14px;background: #2C2C2C;border-bottom: 2px solid #6999FF;'>
-    <span class='hint--bottom' data-hint='Notification'>
-    <a href='#' title=''>
+    <li class='notif' style='padding: 14px;background: #2C2C2C;border-bottom: 2px solid #6999FF;'>
+    <span class='hint--bottom' data-hint='Information'>
+    <a href='#Information' title=''>
     <i class='icon-microphone icon-large' style='color: #fff;opacity: 0.9;'/>
     </a>
     </span>
     </li>
+<script type='text/javascript'>
+    //<![CDATA[
+$(document).ready(function(){
+  $(".notif").click(function(){
+    $("#kutipan").fadeIn(500);
+  });
+  $(".background-hitam").click(function(){
+    $("#kutipan").fadeOut(500);
+  });
+});
+    //]]>
+</script> 
+<div id='kutipan' style='display:none;'>
+<div class='background-hitam'/>
+    <div class='kutipan-wrapper'>
+        Kutipan akan Muncul Disini
+    </div>
+</div>
+
     <li><img alt='profil' src='https://lh6.googleusercontent.com/-1SNrx-39-fs/AAAAAAAAAAI/AAAAAAAAA-k/5PnkRzPIGcM/s50-c-k-no/photo.jpg' style='width: 30px;border-radius: 20px;' title='agus makmun'/></li>
   </ul>
   </div>
@@ -1626,7 +1903,7 @@ Biar gx bad hehe
 
     <a expr:name='data:post.id'/>
     <b:if cond='data:post.title'>
-<li class=' icon-check-sign icon-large' style='position: absolute; margin: 0 auto; padding: 10px 12px; background: #316b95; color: #fff; font-size: 12px;'/>
+<li class=' icon-check-sign icon-large' style='float: left; margin: 0 auto; padding: 10px 12px; background: #316b95; color: #fff; font-size: 12px;'/>
       <h3 class='post-title entry-title' itemprop='name'>
       <b:if cond='data:post.link'>
         <a expr:href='data:post.link'><data:post.title/></a>
@@ -1662,6 +1939,7 @@ Biar gx bad hehe
 <span style='float:right'>
 <iframe allowTransparency='true' frameborder='0' scrolling='no' src='//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FSeribu-Cara-dan-Trik%2F1377717562478850&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21' style='border:none; overflow:hidden; height:21px;width: 85px;'/>
   </span>
+
   </div>
   </b:if>
     </b:if>
@@ -2062,6 +2340,8 @@ function zoomOut() {
     });
     //]]>
 </script> 
+
+
 
   </body>
 </HTML>
