@@ -801,7 +801,20 @@ position:static;
 margin-left: 0;
 }
 }
-/* End http://junior-hc.blogspot.com/ Blogger Threaded Comments */
+
+#search {background: #fff;border-radius: 2px;}
+#search-form {color: gray;
+width: 91.8%;
+padding: 6px 70px 6px 10px;
+font: 13px Arial;
+transition: all 0.2s linear 0s;
+margin: -10px 0 10px;
+border: 1px solid #CFCFCF;
+border-radius: 2px;
+}
+.search-button,.search-button:hover{background-color:#4D90FE;width:60px;padding:2px 5px;margin:5px 0 0 -63px;top:4px;border-radius:0 2px 2px 0;font-size:13px;cursor:pointer;border:none;position:relative;}
+
+
 
 ]]></b:skin>
 <link href='//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css' rel='stylesheet'/>
@@ -859,6 +872,20 @@ $(&quot;.account&quot;).attr(&#39;id&#39;, &#39;&#39;);
   background: #fafafa;
   color: #777575;
   }
+
+#page-loader {
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:999999;
+    background: #303030 url(&quot;http://3.bp.blogspot.com/-sW166HTPK4U/UY2kVNdjsFI/AAAAAAAAEHk/fIO-B-mOeCE/s200/load6.gif&quot;) no-repeat 50% 50%;
+    padding:1em 1.2em;
+    display:none
+    } 
+
 </style>
 
 <style type='text/css'>
@@ -918,20 +945,14 @@ function removeHtmlTag(strx,chop){if(strx.indexOf("<")!=-1){var s = strx.split("
   <ul class='tengah'>
     <li style='padding: 16px;'>
     <span class='hint--bottom' data-hint='Lihat Daftar Isi'>
-<a href='http://ixi01.blogspot.com/p/sitemap.html' title='' style='font-family: sans-serif;font-size: 13px;color: #fff;opacity: 0.9;'>
-    <i class='icon-tasks icon-large' style='color: #56A0FF;
-opacity: 0.9;
-background: #2C2C2C;
-padding: 4px;
-border-radius: 2px;
-border-right: 1px solid #383838;
-border-bottom: 2px solid #414040;'/>  Sitemap
+<a href='http://ixi01.blogspot.com/p/sitemap.html' style='font-family: sans-serif;font-size: 13px;color: #fff;opacity: 0.9;' title=''>
+    <i class='icon-tasks icon-large' style='color: #56A0FF; opacity: 0.9; background: #2C2C2C; padding: 4px; border-radius: 2px; border-right: 1px solid #383838; border-bottom: 2px solid #414040;'/>  Sitemap
     </a>
     </span>
     </li>
     <li style='padding: 15px;'>
     <span class='hint--bottom' data-hint='Github'>
-    <a href='#'  title='' >
+    <a href='https://github.com/agusmakmun/Blog-Preview-Google-Drive' target='_blank' title=''>
     <i class='icon-github icon-large' style='color: #fff;opacity: 0.9;'/>
     </a>
     </span>
@@ -939,7 +960,7 @@ border-bottom: 2px solid #414040;'/>  Sitemap
 
     <li style='padding: 15px;'>
     <span class='hint--bottom' data-hint='Download'>
-    <a href='#' title='' >
+    <a href='#' title=''>
     <i class='icon-cloud-download icon-large' style='color: #fff;opacity: 0.9;'/>
     </a>
     </span>
@@ -954,11 +975,7 @@ border-bottom: 2px solid #414040;'/>  Sitemap
 <li><a href='#Dashboard' title=''>Dashboard</a></li>
 <li><a href='#Profile' title=''>Profile</a></li>
 <li><a href='#settings' title=''>Settings</a></li>
-  <li><i class="icon-exclamation-sign icon-large" style="position: absolute;
-margin: 0 auto;
-padding: 6px 6px;
-color: #000;
-font-size: 12px;"></i><a href='#feedback' title=''>Send Feedback</a></li>
+  <li><i class='icon-exclamation-sign icon-large' style='position: absolute; margin: 0 auto; padding: 6px 6px; color: #000; font-size: 12px;'/><a href='#feedback' title=''>Send Feedback</a></li>
 </ul>
 </div>
 </div>
@@ -973,7 +990,7 @@ font-size: 12px;"></i><a href='#feedback' title=''>Send Feedback</a></li>
     </a>
     </span>
     </li>
-    <li><img src='https://lh6.googleusercontent.com/-1SNrx-39-fs/AAAAAAAAAAI/AAAAAAAAA-k/5PnkRzPIGcM/s50-c-k-no/photo.jpg' style='width: 30px;border-radius: 20px;'/></li>
+    <li><img alt='profil' src='https://lh6.googleusercontent.com/-1SNrx-39-fs/AAAAAAAAAAI/AAAAAAAAA-k/5PnkRzPIGcM/s50-c-k-no/photo.jpg' style='width: 30px;border-radius: 20px;' title='agus makmun'/></li>
   </ul>
   </div>
 
@@ -998,6 +1015,14 @@ Biar gx bad hehe
 </div>
 
 <div id='dalam'>
+<div id='search'>
+<form action='/search' id='searchform' method='get'>
+<input id='search-form' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;' type='text' value='Search here ...'/>
+<button class='search-button' title='Search' type='submit'><img alt='search button' height='21' src='http://2.bp.blogspot.com/-2jHjDZuQt-Q/Uluj1K7q-AI/AAAAAAAAaPE/k2uOoGDyrjw/s1600/search.png' title='Search' width='21'/>
+</button>
+</form>
+</div>
+
 <b:section class='main' id='main'>
   <b:widget id='Blog1' locked='true' title='Posting Blog' type='Blog'>
     <b:includable id='main' var='top'>
@@ -1334,13 +1359,13 @@ Biar gx bad hehe
     <b:includable id='feedLinks'>
   <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
     <b:if cond='data:feedLinks'>
-      <div class='blog-feeds' style="display:none">
+      <div class='blog-feeds' style='display:none'>
         <b:include data='feedLinks' name='feedLinksBody'/>
       </div>
     </b:if>
 
     <b:else/> <!--Post feed links -->
-    <div class='post-feeds'  style="display:none">
+    <div class='post-feeds' style='display:none'>
       <b:loop values='data:posts' var='post'>
         <b:if cond='data:post.allowComments'>
           <b:if cond='data:post.feedLinks'>
@@ -1601,12 +1626,7 @@ Biar gx bad hehe
 
     <a expr:name='data:post.id'/>
     <b:if cond='data:post.title'>
-<li class=' icon-check-sign icon-large' style='position: absolute;
-margin: 0 auto;
-padding: 10px 12px;
-background: #316b95;
-color: #fff;
-font-size: 12px;'/>
+<li class=' icon-check-sign icon-large' style='position: absolute; margin: 0 auto; padding: 10px 12px; background: #316b95; color: #fff; font-size: 12px;'/>
       <h3 class='post-title entry-title' itemprop='name'>
       <b:if cond='data:post.link'>
         <a expr:href='data:post.link'><data:post.title/></a>
@@ -2030,6 +2050,18 @@ function zoomOut() {
 }
 //]]>
 </script>
+
+<script type='text/javascript'>
+    //<![CDATA[
+    // Menyisipkan markup tabir animasi
+    $(document.body).append('<div id="page-loader"></div>');
+    // Saat halaman aktif terpicu untuk berpindah/keluar menuju halaman lain...
+    $(window).on("beforeunload", function() {
+        // ... tampilkan tabir animasi dengan efek `.fadeIn()`
+        $('#page-loader').fadeIn(1000).delay(6000).fadeOut(1000);
+    });
+    //]]>
+</script> 
 
   </body>
 </HTML>
