@@ -1,4 +1,11 @@
-<pre>
+/*
+Blogger Template Style
+Name    : Blog Preview Google Drive
+Designer: Agus Makmun
+Concept : Google Drive
+URL     : http://semua-tinggal-download.blogspot.com/
+*/
+
 @font-face{font-family:'Oswald';font-style:normal;font-weight:400;src:local('Oswald Regular'),local('Oswald-Regular'),url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff')}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 
@@ -33,6 +40,11 @@ color: #00FFF5;
 text-shadow: 0px 1px #1BACAC;
 transition: all 1s ease;
 }
+ol {
+margin-left:30px;
+display: inline-block;
+}
+
 #comments > h4 {
 display: block;
 margin: 0 auto;
@@ -122,6 +134,17 @@ float:left;
 list-style:none;
 padding:11px;
 }
+.kodeku {
+background-color: #F8F8F8;
+border: 0;
+display: inline-block;
+font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, monospace, serif;
+font-size: 10pt;
+padding: 1%;
+width: 98%;
+line-height: 21px;
+margin: 10px 0;
+}
 
 body {
   background:#2C2C2C;
@@ -145,6 +168,7 @@ right: 5px;
 bottom: 5px;
 }
 #dalam {
+  width: 100%;
   max-width: 1200px;
   min-width: 800px;
   margin:0 auto;
@@ -152,6 +176,7 @@ bottom: 5px;
   background: #fff;
   padding: 10px;
   transition: all .4s ease-in;
+  display: inline-block;
 }
 
 /* Clearing element */
@@ -568,7 +593,7 @@ overflow: hidden;
 margin: 0 auto;
 }
 
-/*------------- START http://junior-hc.blogspot.com/ Threaded Comments -------------*/
+/* START http://junior-hc.blogspot.com/ Threaded Comments */
 .comments {
 clear: both;
 margin-top: 10px;
@@ -757,4 +782,25 @@ position:static;
 margin-left: 0;
 }
 }
-</pre>
+
+#search {background: #fff;border-radius: 2px;height: 40px;}
+#search-form {color: gray;
+width: 86.5%;
+padding: 6px 70px 6px 10px;
+font: 13px Arial;
+transition: all 0.2s linear 0s;
+margin: 4px 0;
+border: 1px solid #CFCFCF;
+border-right: none;
+border-radius: 2px 0 0 2px;
+}
+.search-button,.search-button:hover{background-color: #4D90FE;
+width: 65px;
+padding: 3px 5px;
+margin: 4px 0 0 -63px;
+top: 4px;
+border-radius: 0 2px 2px 0;
+font-size: 13px;
+cursor: pointer;
+border: none;
+float: right;}
