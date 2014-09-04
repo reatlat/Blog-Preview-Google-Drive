@@ -18,7 +18,7 @@ Hai sahabat blogger, sudah lama yah tidak berjumpa.. :)</div>
 <div style="text-align: justify;">
 Beberapa hari yang lalu, saya sempat tertarik ketika membuka&nbsp;<b><i>Preview File Google Drive</i></b>. dan terbayanglah ide saya untuk membuatnya..hehe.. yaa sekaligus untuk belajar lebih dalam lagi mengenai dunia blogging. Menjadi semangat juga ketika saya cuba untuk bertanya kepada para agan-agan yang ada di Group Blogger, ternyata banyak yang mensupport-nya. Hal ini menjadikan saya pribadi untuk merasa lebih bergairah tentunya..hehe.. Dalam kesempatan yang sebelumnya kami juga telah membuat <a href="http://agan-pertamax.blogspot.com/" target="_blank">Template Blog Concept 4Shared</a>.</div>
 <br />
-Uke langsung saja, untuk mendownload template Blog Preview Google Drive ini, silahkan download file-nya <a href="http://www.tusfiles.net/sei1y0xx4iy8" target="_blank">DISINI</a>. password url:&nbsp;semua-tinggal-download<br />
+Uke langsung saja, untuk mendownload template Blog Preview Google Drive ini, silahkan download file-nya <a href="http://www.tusfiles.net/8x46i0n5ndvw" target="_blank">DISINI</a>. password url:&nbsp;semua-tinggal-download<br />
 <br />
 <span style="font-size: large;">Fitur-fitur yang tersedia</span>
 <br />
