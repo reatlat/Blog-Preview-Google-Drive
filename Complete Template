@@ -76,9 +76,11 @@ color: #00FFF5;
 text-shadow: 0px 1px #1BACAC;
 transition: all 1s ease;
 }
-ol {
-margin-left:30px;
-display: inline-block;
+
+.tr_bq {
+margin-left: 20px;
+background: #fafafa;
+padding: 5px;
 }
 
 #comments > h4 {
